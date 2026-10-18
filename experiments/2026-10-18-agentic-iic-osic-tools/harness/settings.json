@@ -1,0 +1,2 @@
+{"hooks":{"PreToolUse":[{"matcher":"*","hooks":[{"type":"command","command":"/work/rb-guard/guard.py"}]}]},
+ "permissions":{"allow":["Bash","Read"]}}
