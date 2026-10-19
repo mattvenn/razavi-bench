@@ -1,0 +1,32 @@
+{
+ "rollout": 2,
+ "guard": {
+  "allowed": 722,
+  "denied": 36
+ },
+ "denied": {
+  "Bash: ls -la /work/rb-r2/<slug>/in/": 25,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/b5l2td8cz.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/b9934f0gp.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/bk7atkcvh.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/br397xcrf.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/b76roiw0f.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/bsoadab4y.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/bp9gokoo5.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/bdtc24c3k.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/bd3ev4vb1.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/b2w3io8j9.output": 1,
+  "Read: /tmp/claude-0/<slug>/<slug>/tasks/buyexy5ao.output": 1
+ },
+ "transcript_files": 52,
+ "forbidden_term_hits": {
+  "golden_solution": 0,
+  "netlists/": 0,
+  "verify.py": 0,
+  "evaluation_rubric": 0,
+  "razavi-bench": 0,
+  "tokenzhang": 0,
+  "github.com/": 0
+ },
+ "golden_span_hits": 0
+}

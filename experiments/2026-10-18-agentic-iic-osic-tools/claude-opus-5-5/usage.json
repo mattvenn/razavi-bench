@@ -398,5 +398,405 @@
   "num_turns": 13,
   "duration_ms": 527244,
   "cost_usd_list": 1.7273670000000003
+ },
+ "2:part1-001-double-length-and-width-mosfet-its-intrinsic": {
+  "input_tokens": 67032,
+  "cached_input_tokens": 64395,
+  "output_tokens": 1120,
+  "num_turns": 2,
+  "duration_ms": 12663,
+  "cost_usd_list": 0.6559958
+ },
+ "2:part1-002-student-says-transconductance-mosfet-goes-up-as": {
+  "input_tokens": 190915,
+  "cached_input_tokens": 159542,
+  "output_tokens": 20622,
+  "num_turns": 11,
+  "duration_ms": 456807,
+  "cost_usd_list": 0.6952524
+ },
+ "2:part1-003-small-signal-model-pmos-device-identical-nmos": {
+  "input_tokens": 148475,
+  "cached_input_tokens": 117910,
+  "output_tokens": 22633,
+  "num_turns": 9,
+  "duration_ms": 237570,
+  "cost_usd_list": 0.720698
+ },
+ "2:part1-004-sketch-ix-versus-vx": {
+  "input_tokens": 260390,
+  "cached_input_tokens": 224248,
+  "output_tokens": 24861,
+  "num_turns": 13,
+  "duration_ms": 276450,
+  "cost_usd_list": 0.8311096
+ },
+ "2:part1-005-sketch-ix-versus-vx": {
+  "input_tokens": 366887,
+  "cached_input_tokens": 321611,
+  "output_tokens": 33838,
+  "num_turns": 15,
+  "duration_ms": 366703,
+  "cost_usd_list": 1.1031781999999999
+ },
+ "2:part1-006-device-act-as-current-source": {
+  "input_tokens": 144345,
+  "cached_input_tokens": 113684,
+  "output_tokens": 23041,
+  "num_turns": 8,
+  "duration_ms": 254422,
+  "cost_usd_list": 0.7287807999999999
+ },
+ "2:part1-007-pmos-common-source-source-degeneration": {
+  "input_tokens": 375557,
+  "cached_input_tokens": 311586,
+  "output_tokens": 51394,
+  "num_turns": 12,
+  "duration_ms": 451795,
+  "cost_usd_list": 1.6018692
+ },
+ "2:part1-008-source-follower": {
+  "input_tokens": 260789,
+  "cached_input_tokens": 217552,
+  "output_tokens": 29775,
+  "num_turns": 11,
+  "duration_ms": 269112,
+  "cost_usd_list": 0.9848184000000001
+ },
+ "2:part1-009-common-gate-source-input": {
+  "input_tokens": 289122,
+  "cached_input_tokens": 223147,
+  "output_tokens": 53814,
+  "num_turns": 9,
+  "duration_ms": 479659,
+  "cost_usd_list": 1.6486374
+ },
+ "2:part1-010-source-input-shorted-to-ground": {
+  "input_tokens": 143060,
+  "cached_input_tokens": 113174,
+  "output_tokens": 19260,
+  "num_turns": 9,
+  "duration_ms": 184195,
+  "cost_usd_list": 0.6468588
+ },
+ "2:part1-011-many-poles-have": {
+  "input_tokens": 126909,
+  "cached_input_tokens": 104517,
+  "output_tokens": 13896,
+  "num_turns": 9,
+  "duration_ms": 138096,
+  "cost_usd_list": 0.4778954
+ },
+ "2:part1-012-source-input-resistive-feedback": {
+  "input_tokens": 288934,
+  "cached_input_tokens": 233009,
+  "output_tokens": 44691,
+  "num_turns": 9,
+  "duration_ms": 406067,
+  "cost_usd_list": 1.3877498000000001
+ },
+ "2:part1-013-source-follower-current-source-load": {
+  "input_tokens": 350260,
+  "cached_input_tokens": 292560,
+  "output_tokens": 44427,
+  "num_turns": 14,
+  "duration_ms": 436100,
+  "cost_usd_list": 1.4085480000000001
+ },
+ "2:part1-014-cmos-inverter": {
+  "input_tokens": 291446,
+  "cached_input_tokens": 233617,
+  "output_tokens": 45358,
+  "num_turns": 10,
+  "duration_ms": 482622,
+  "cost_usd_list": 1.4164354000000001
+ },
+ "2:part1-015-malformed-cmos-inverter": {
+  "input_tokens": 229478,
+  "cached_input_tokens": 189649,
+  "output_tokens": 27452,
+  "num_turns": 11,
+  "duration_ms": 298469,
+  "cost_usd_list": 0.9055137999999999
+ },
+ "2:part1-016-common-source-diode-connected-load": {
+  "input_tokens": 262368,
+  "cached_input_tokens": 206546,
+  "output_tokens": 38227,
+  "num_turns": 10,
+  "duration_ms": 437613,
+  "cost_usd_list": 1.2523452000000002
+ },
+ "2:part1-017-pmos-input-invalid-pulldown": {
+  "input_tokens": 396769,
+  "cached_input_tokens": 323753,
+  "output_tokens": 56273,
+  "num_turns": 12,
+  "duration_ms": 594586,
+  "cost_usd_list": 1.7742506
+ },
+ "2:part1-018-find-rout": {
+  "input_tokens": 57331,
+  "cached_input_tokens": 41500,
+  "output_tokens": 7638,
+  "num_turns": 5,
+  "duration_ms": 71414,
+  "cost_usd_list": 0.28766800000000003
+ },
+ "2:part1-019-ensure-m2-saturation": {
+  "input_tokens": 160833,
+  "cached_input_tokens": 127701,
+  "output_tokens": 21535,
+  "num_turns": 8,
+  "duration_ms": 206136,
+  "cost_usd_list": 0.7212321999999999
+ },
+ "2:part1-020-nmos-cascode-gain-stage": {
+  "input_tokens": 480584,
+  "cached_input_tokens": 407060,
+  "output_tokens": 57923,
+  "num_turns": 14,
+  "duration_ms": 552608,
+  "cost_usd_list": 1.82796
+ },
+ "2:part1-021-cascode-structure": {
+  "input_tokens": 106346,
+  "cached_input_tokens": 74037,
+  "output_tokens": 24013,
+  "num_turns": 6,
+  "duration_ms": 220051,
+  "cost_usd_list": 0.7534913999999999
+ },
+ "2:part1-022-explain-why-miller-effect-less-pronounced-cascode": {
+  "input_tokens": 208312,
+  "cached_input_tokens": 157988,
+  "output_tokens": 41446,
+  "num_turns": 9,
+  "duration_ms": 427558,
+  "cost_usd_list": 1.2630456
+ },
+ "2:part1-023-common-gate-pmos-load": {
+  "input_tokens": 338866,
+  "cached_input_tokens": 278049,
+  "output_tokens": 48877,
+  "num_turns": 11,
+  "duration_ms": 493182,
+  "cost_usd_list": 1.5195978
+ },
+ "2:part1-024-many-poles-have": {
+  "input_tokens": 87553,
+  "cached_input_tokens": 65329,
+  "output_tokens": 14172,
+  "num_turns": 6,
+  "duration_ms": 142281,
+  "cost_usd_list": 0.47424980000000005
+ },
+ "2:part1-025-series-nmos-effective-long-channel": {
+  "input_tokens": 438922,
+  "cached_input_tokens": 374248,
+  "output_tokens": 49616,
+  "num_turns": 14,
+  "duration_ms": 524981,
+  "cost_usd_list": 1.5844496
+ },
+ "2:part1-026-source-follower-drives-common-gate": {
+  "input_tokens": 398010,
+  "cached_input_tokens": 338291,
+  "output_tokens": 46109,
+  "num_turns": 14,
+  "duration_ms": 422601,
+  "cost_usd_list": 1.4674862000000002
+ },
+ "2:part1-027-explain-why-output-impedance-be-inductive": {
+  "input_tokens": 286322,
+  "cached_input_tokens": 240066,
+  "output_tokens": 33498,
+  "num_turns": 12,
+  "duration_ms": 348691,
+  "cost_usd_list": 1.0879332000000002
+ },
+ "2:part1-028-current-input-positive-feedback": {
+  "input_tokens": 702835,
+  "cached_input_tokens": 628604,
+  "output_tokens": 61272,
+  "num_turns": 16,
+  "duration_ms": 565571,
+  "cost_usd_list": 1.9448808
+ },
+ "2:part1-029-feedback-transimpedance-amplifier": {
+  "input_tokens": 501044,
+  "cached_input_tokens": 404622,
+  "output_tokens": 81687,
+  "num_turns": 10,
+  "duration_ms": 713997,
+  "cost_usd_list": 2.4859604
+ },
+ "2:part1-030-pmos-current-input-feedback": {
+  "input_tokens": 600815,
+  "cached_input_tokens": 526335,
+  "output_tokens": 60363,
+  "num_turns": 15,
+  "duration_ms": 559666,
+  "cost_usd_list": 1.908247
+ },
+ "2:part2-001-fail-oscillate-three-capacitors-become-arbitrarily-large": {
+  "input_tokens": 416172,
+  "cached_input_tokens": 364039,
+  "output_tokens": 39976,
+  "num_turns": 16,
+  "duration_ms": 1495025,
+  "cost_usd_list": 1.2892798
+ },
+ "2:part2-002-phase-noise-three-capacitors-doubled": {
+  "input_tokens": 1297387,
+  "cached_input_tokens": 1203711,
+  "output_tokens": 78188,
+  "num_turns": 25,
+  "duration_ms": 1707759,
+  "cost_usd_list": 2.5537262000000003
+ },
+ "2:part2-003-fail-oscillate-cl-becomes-arbitrarily-large": {
+  "input_tokens": 417034,
+  "cached_input_tokens": 361190,
+  "output_tokens": 39913,
+  "num_turns": 14,
+  "duration_ms": 1299702,
+  "cost_usd_list": 1.3171460000000002
+ },
+ "2:part2-004-double-widths-nmos-and-pmos-devices-phase": {
+  "input_tokens": 1955353,
+  "cached_input_tokens": 1855747,
+  "output_tokens": 77955,
+  "num_turns": 35,
+  "duration_ms": 2191976,
+  "cost_usd_list": 2.7268334
+ },
+ "2:part2-005-determine-small-signal-resistance-seen-looking-into": {
+  "input_tokens": 139058,
+  "cached_input_tokens": 95575,
+  "output_tokens": 33479,
+  "num_turns": 8,
+  "duration_ms": 392318,
+  "cost_usd_list": 1.036511
+ },
+ "2:part2-006-oscillates-change": {
+  "input_tokens": 562499,
+  "cached_input_tokens": 506282,
+  "output_tokens": 38366,
+  "num_turns": 18,
+  "duration_ms": 552776,
+  "cost_usd_list": 1.3181763999999998
+ },
+ "2:part2-007-initial-voltage-gain-as-width-m7-increases": {
+  "input_tokens": 660790,
+  "cached_input_tokens": 588930,
+  "output_tokens": 55105,
+  "num_turns": 19,
+  "duration_ms": 593693,
+  "cost_usd_list": 1.79463
+ },
+ "2:part2-008-initial-voltage-gain-increase-capacitance-at-nodes": {
+  "input_tokens": 565976,
+  "cached_input_tokens": 489458,
+  "output_tokens": 60855,
+  "num_turns": 15,
+  "duration_ms": 1576198,
+  "cost_usd_list": 1.9270236
+ },
+ "2:part2-009-increase-widths-m5-and-m6-speed-improve": {
+  "input_tokens": 845212,
+  "cached_input_tokens": 779651,
+  "output_tokens": 50254,
+  "num_turns": 25,
+  "duration_ms": 1385441,
+  "cost_usd_list": 1.6853142
+ },
+ "2:part2-010-speed-improve-or-degrade-increase-widths-clocked": {
+  "input_tokens": 3304622,
+  "cached_input_tokens": 3193856,
+  "output_tokens": 82285,
+  "num_turns": 49,
+  "duration_ms": 3306833,
+  "cost_usd_list": 3.1702151999999995
+ },
+ "2:part2-011-structure-provide-quadrature-outputs": {
+  "input_tokens": 327630,
+  "cached_input_tokens": 261617,
+  "output_tokens": 50345,
+  "num_turns": 9,
+  "duration_ms": 746887,
+  "cost_usd_list": 1.5872554
+ },
+ "2:part2-012-repeat-question-10-for-topology": {
+  "input_tokens": 1541324,
+  "cached_input_tokens": 1435836,
+  "output_tokens": 73907,
+  "num_turns": 29,
+  "duration_ms": 2413059,
+  "cost_usd_list": 2.6089872
+ },
+ "2:part2-013-dynamic-latch-divide-by-two": {
+  "input_tokens": 774854,
+  "cached_input_tokens": 696762,
+  "output_tokens": 64695,
+  "num_turns": 20,
+  "duration_ms": 2739604,
+  "cost_usd_list": 2.0578444
+ },
+ "2:part2-014-red-inverter-b-affect-performance": {
+  "input_tokens": 1051269,
+  "cached_input_tokens": 960865,
+  "output_tokens": 61343,
+  "num_turns": 21,
+  "duration_ms": 3340573,
+  "cost_usd_list": 2.142113
+ },
+ "2:part2-015-but-input-red-inverter-not-tied-output": {
+  "input_tokens": 864072,
+  "cached_input_tokens": 773703,
+  "output_tokens": 81027,
+  "num_turns": 16,
+  "duration_ms": 1575264,
+  "cost_usd_list": 2.4981126000000002
+ },
+ "2:part2-016-optimize-for-nf-rin-must-remain-equal": {
+  "input_tokens": 2297604,
+  "cached_input_tokens": 2182912,
+  "output_tokens": 88958,
+  "num_turns": 35,
+  "duration_ms": 2283171,
+  "cost_usd_list": 3.1330063999999997
+ },
+ "2:part2-017-compute-input-impedance": {
+  "input_tokens": 131441,
+  "cached_input_tokens": 104448,
+  "output_tokens": 19813,
+  "num_turns": 8,
+  "duration_ms": 183749,
+  "cost_usd_list": 0.6330296000000001
+ },
+ "2:part2-018-ldo-regulator-generates-thermal-noise-with-spectrum": {
+  "input_tokens": 1723123,
+  "cached_input_tokens": 1612424,
+  "output_tokens": 93104,
+  "num_turns": 28,
+  "duration_ms": 2102204,
+  "cost_usd_list": 3.0699488000000006
+ },
+ "2:part2-019-add-ct-tail-node-as-phase-noise": {
+  "input_tokens": 2015163,
+  "cached_input_tokens": 1882283,
+  "output_tokens": 107992,
+  "num_turns": 25,
+  "duration_ms": 3341734,
+  "cost_usd_list": 3.5991366
+ },
+ "2:part2-020-estimate-oscillation-frequency": {
+  "input_tokens": 404964,
+  "cached_input_tokens": 335715,
+  "output_tokens": 56750,
+  "num_turns": 11,
+  "duration_ms": 573554,
+  "cost_usd_list": 1.7560470000000001
  }
 }
