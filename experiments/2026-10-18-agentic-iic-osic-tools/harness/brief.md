@@ -3,8 +3,8 @@
 You are answering one analog-circuit-design question. Answer it as an expert analog designer would.
 
 ## Your inputs
-- The question: `/work/rb/<slug>/in/instruction.md` (read it with the Read tool).
-- Figures: `/work/rb/<slug>/in/figure-*.png`, referenced by the instruction (read each with the Read tool to see it). Inspect every figure carefully: device types (NMOS/PMOS, arrow directions), every connection, where the input and output are.
+- The question: `<root>/<slug>/in/instruction.md` (read it with the Read tool).
+- Figures: `<root>/<slug>/in/figure-*.png`, referenced by the instruction (read each with the Read tool to see it). Inspect every figure carefully: device types (NMOS/PMOS, arrow directions), every connection, where the input and output are.
 - Nothing else is available to you, and you must not look for anything else.
 
 ## Your tools

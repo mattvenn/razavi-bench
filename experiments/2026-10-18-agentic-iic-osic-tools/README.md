@@ -106,15 +106,65 @@ Seven Part 2 tasks were interrupted when the batch job hit a 2-hour limit; their
 partial work was deleted and each was re-run from scratch, so every published
 answer comes from one uninterrupted run.
 
+## Running more rollouts
+
+`harness/run_rollout.sh` runs a full rollout on any Linux machine with Docker,
+the `claude` CLI (logged in, or `ANTHROPIC_API_KEY` set), Python 3 and about
+20 GB free for the image. It stages the inputs, runs the guard self-test and a
+sandbox check before any paid call, answers every task, then writes the answer
+JSONL and an audit.
+
+```bash
+git clone https://github.com/mattvenn/razavi-bench.git && cd razavi-bench
+git checkout claude/intelligent-dijkstra-k16jf4
+H=experiments/2026-10-18-agentic-iic-osic-tools/harness
+RB_ROOT=$HOME/rb-r2 $H/run_rollout.sh 2 8   # rollout 2, 8 tasks at a time
+RB_ROOT=$HOME/rb-r3 $H/run_rollout.sh 3 8
+```
+
+- Concurrency: simulations are CPU-heavy (five agents loaded 4 cores to a
+  load average of ~40), so use roughly half the core count.
+- Each task may run up to `RB_TASK_TIMEOUT` seconds (default 3600). Re-running
+  the same command resumes: tasks with an answer are skipped, and unfinished
+  ones restart from an empty `/out`.
+- `RB_ROOT` must be outside the repository; each rollout needs its own.
+- The script stops if the guard self-test, the sandbox check, any answer, or
+  the audit fails. The audit prints only counts.
+
+Then grade each rollout and commit (score files are in `.gitignore` and are
+added with `-f`, like the other experiments):
+
+```bash
+M=experiments/2026-10-18-agentic-iic-osic-tools/claude-opus-5-5
+for N in 2 3; do
+  python3 tools/evaluate_answers.py \
+    --input $M/model_outputs/claude-opus-5-5-agentic-iic-max-rollout-$N.jsonl \
+    --output $M/judge_outputs/deepseek-v4-pro.rollout-$N.scores.jsonl \
+    --api-url https://openrouter.ai/api/v1/chat/completions \
+    --model deepseek/deepseek-v4-pro --api-key-env OPENROUTER_API_KEY \
+    --json-mode --thinking-mode disabled --openrouter-reasoning \
+    --max-tokens 8192 --concurrency 5 --resume
+done
+```
+
+Commit the answers before grading, as rollout 1 did, so the judge metadata
+records a commit with the answers frozen.
+
+Rollout 1 ran the first version of this harness, with fixed `/work` paths
+(see commit `0ca2c76`); the portable version adds the staging-root setting,
+the preflight, the guard copy outside the repository and the build/audit
+scripts, with the same guard rules and answerer brief.
+
 ## Files
 
 - `claude-opus-5-5/model_outputs/claude-opus-5-5-agentic-iic-max-rollout-1.jsonl`:
   answers in the direct-QA row schema plus `mode` and `tools_used`
 - `claude-opus-5-5/judge_outputs/deepseek-v4-pro.scores.jsonl` and metadata
 - `claude-opus-5-5/usage.json`: tokens, turns, duration and cost per task
-- `harness/`: `run_task.sh` (per-task runner), `guard.py` (tool guard),
-  `settings.json` (hook config), `brief.md` (the answer agent's instructions)
-  and the guard logs
+- `harness/`: `run_rollout.sh` (one full rollout), `run_task.sh` (one task),
+  `guard.py` (tool guard) and `test_guard.py` (its escape tests), `brief.md`
+  (the answer agent's instructions), `build_rollout.py`, `audit.py`, and the
+  rollout-1 guard logs
 
 The website data is unchanged: this is a different evaluation mode from the
 direct-QA leaderboard.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""PreToolUse guard for the razavi-answerer subagent.
+"""PreToolUse guard for the sandboxed Razavi-Bench answerer.
 
 Fails closed: any tool call that is not one of the two allowed shapes, and any
 error while checking, is denied (exit 2). Every decision is logged.
@@ -8,8 +8,11 @@ Allowed:
   Bash  exactly:  docker exec -i rb-sbx-<slug> bash -s <<'RBEOF'\n<body>\nRBEOF
         (quoted heredoc, so the host shell expands nothing; the body runs
         inside a --network none container that holds only public task inputs)
-  Read  /work/rb/<slug>/in/instruction.md or /work/rb/<slug>/in/figure-N.png,
+  Read  $RB_ROOT/<slug>/in/instruction.md or $RB_ROOT/<slug>/in/figure-N.png,
         a regular file (not a symlink) whose realpath is the path itself.
+
+RB_ROOT (default /work/rb) is the staging directory; decisions are logged to
+$RB_ROOT/.guard/log.jsonl.
 """
 import json
 import os
@@ -17,14 +20,15 @@ import re
 import sys
 import time
 
-LOG = "/work/rb-guard/log.jsonl"
+ROOT = os.path.realpath(os.environ.get("RB_ROOT", "/work/rb"))
+LOG = os.environ.get("RB_GUARD_LOG") or os.path.join(ROOT, ".guard", "log.jsonl")
 SLUG = r"[a-z0-9][a-z0-9-]*"
 BASH_RE = re.compile(
     r"docker exec -i rb-sbx-(" + SLUG + r") bash -s <<'RBEOF'\n"
     r"((?:.*\n)*?)"
     r"RBEOF\n?",
 )
-READ_RE = re.compile(r"/work/rb/(" + SLUG + r")/in/(instruction\.md|figure-[0-9]+\.png)")
+READ_RE = re.compile(re.escape(ROOT) + r"/(" + SLUG + r")/in/(instruction\.md|figure-[0-9]+\.png)")
 
 
 def log(entry):
@@ -51,7 +55,7 @@ def check(data):
     if tool == "Read":
         p = inp.get("file_path", "")
         if not READ_RE.fullmatch(p):
-            return False, "Read is only allowed on /work/rb/<slug>/in/instruction.md or figure-N.png"
+            return False, "Read is only allowed on <root>/<slug>/in/instruction.md or figure-N.png"
         if os.path.islink(p) or not os.path.isfile(p) or os.path.realpath(p) != p:
             return False, "path must be a regular, non-symlink file"
         return True, "ok"
